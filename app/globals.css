@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 225 33% 5%;
+  --foreground: 210 20% 96%;
+  --card: 222 30% 8%;
+  --border: 214 24% 17%;
+  --muted: 215 14% 66%;
+  --accent: 206 100% 62%;
+  --accent-soft: 210 95% 54%;
+  --glow: 167 70% 58%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #040509 0%, #07101a 44%, #05070b 100%);
+  color: hsl(var(--foreground));
+  font-feature-settings: "ss01" on, "cv01" on, "cv02" on;
+}
+
+::selection {
+  background: rgba(98, 207, 255, 0.28);
+  color: white;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .surface {
+    @apply rounded-[28px] border border-white/10 bg-white/[0.035] shadow-halo backdrop-blur-md;
+  }
+
+  .section-shell {
+    @apply mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-[11px] font-medium uppercase tracking-[0.28em] text-white/70;
+  }
+
+  .grid-fade {
+    mask-image: linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
+  }
+}
