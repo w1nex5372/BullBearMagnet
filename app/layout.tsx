@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter_Tight, Space_Grotesk } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 
 const fontSans = Inter_Tight({
@@ -28,11 +27,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${fontSans.variable} ${fontDisplay.variable} font-sans antialiased`}>
         {children}
-        <Script
-          src="https://admin.aidra.lt/widget.js"
-          data-client-id="bullbearmagnet"
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   );

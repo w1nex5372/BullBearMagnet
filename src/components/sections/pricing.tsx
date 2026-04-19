@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { WidgetScript } from "@/components/ui/widget-script";
 
 export function Pricing() {
   const trialCard = pricingCards[0];
@@ -10,6 +11,7 @@ export function Pricing() {
 
   return (
     <section id="pricing" className="pb-20 sm:pb-24">
+      <WidgetScript />
       <Container>
         <SectionHeading
           eyebrow="Trial Access"
