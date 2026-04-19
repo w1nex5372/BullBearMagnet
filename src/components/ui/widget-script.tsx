@@ -7,7 +7,7 @@ export function WidgetScript() {
     <Script
       src="https://admin.aidra.lt/widget.js"
       data-client-id="bullbearmagnet"
-      strategy="lazyOnload"
+      strategy="afterInteractive"
     />
   );
 }

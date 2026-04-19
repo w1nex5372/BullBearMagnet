@@ -23,7 +23,7 @@ export function Faq() {
 
         <div className="mx-auto mt-12 grid max-w-4xl gap-4">
           {faqs.map((item, index) => (
-            <Reveal key={item.question} delay={index * 0.05}>
+            <Reveal key={item.question} disabled>
               <article className="surface overflow-hidden px-6 py-5">
                 <button
                   type="button"

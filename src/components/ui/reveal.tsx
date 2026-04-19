@@ -1,16 +1,17 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export function Reveal({
   children,
   className,
   delay = 0,
-  duration = 0.7,
-  y = 24,
+  duration = 0.45,
+  y = 16,
   once = true,
-  amount = 0.25,
+  amount = 0.12,
+  disabled = false,
 }: {
   children: React.ReactNode;
   className?: string;
@@ -19,7 +20,14 @@ export function Reveal({
   y?: number;
   once?: boolean;
   amount?: number;
+  disabled?: boolean;
 }) {
+  const prefersReducedMotion = useReducedMotion();
+
+  if (disabled || prefersReducedMotion) {
+    return <div className={cn(className)}>{children}</div>;
+  }
+
   return (
     <motion.div
       className={cn(className)}

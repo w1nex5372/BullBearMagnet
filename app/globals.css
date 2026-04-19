@@ -68,7 +68,7 @@ body {
 
 @layer components {
   .surface {
-    @apply rounded-[28px] border border-white/10 bg-white/[0.035] shadow-halo backdrop-blur-md;
+    @apply rounded-[28px] border border-white/10 bg-white/[0.03] shadow-[0_14px_40px_rgba(7,10,18,0.22)] backdrop-blur-sm;
   }
 
   .section-shell {

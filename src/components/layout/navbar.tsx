@@ -14,9 +14,9 @@ export function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <div className="absolute inset-x-0 top-0 h-full border-b border-white/8 bg-[#050911]/55 backdrop-blur-2xl" />
+      <div className="absolute inset-x-0 top-0 h-full border-b border-white/8 bg-[#050911]/65 backdrop-blur-md" />
       <Container className="relative py-4 sm:py-5">
-        <div className="rounded-[30px] border border-white/10 bg-white/[0.035] px-4 py-3 shadow-[0_20px_60px_rgba(2,6,18,0.32)] backdrop-blur-xl sm:px-5">
+        <div className="rounded-[30px] border border-white/10 bg-white/[0.03] px-4 py-3 shadow-[0_12px_32px_rgba(2,6,18,0.18)] backdrop-blur-md sm:px-5">
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <Link href="/" className="flex items-center gap-3">

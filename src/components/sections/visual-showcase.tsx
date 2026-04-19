@@ -16,12 +16,12 @@ export function VisualShowcase() {
         />
 
         <div className="mt-12 grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
-          <Reveal>
+          <Reveal y={12}>
             <article className="surface relative overflow-hidden p-4 sm:p-5">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(83,161,255,0.14),transparent_34%),linear-gradient(180deg,rgba(255,255,255,0.02),transparent_28%)]" />
               <div className="absolute inset-x-16 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/45 to-transparent" />
 
-              <div className="relative rounded-[26px] border border-white/10 bg-[#081019] p-4 shadow-[0_24px_80px_rgba(3,8,20,0.3)] sm:p-5">
+              <div className="relative rounded-[26px] border border-white/10 bg-[#081019] p-4 shadow-[0_16px_40px_rgba(3,8,20,0.18)] sm:p-5">
                 <div className="flex items-center justify-between gap-4 border-b border-white/8 pb-4">
                   <div>
                     <p className="text-xs uppercase tracking-[0.24em] text-white/34">Primary frame</p>
@@ -50,8 +50,8 @@ export function VisualShowcase() {
                         />
                       ))}
                     </div>
-                    <div className="absolute left-[8%] top-[20%] h-24 w-24 rounded-full bg-cyan-400/10 blur-2xl" />
-                    <div className="absolute right-[10%] top-[32%] h-28 w-28 rounded-full bg-emerald-300/8 blur-2xl" />
+                    <div className="absolute left-[8%] top-[20%] h-20 w-20 rounded-full bg-cyan-400/8 blur-xl" />
+                    <div className="absolute right-[10%] top-[32%] h-24 w-24 rounded-full bg-emerald-300/6 blur-xl" />
                     <div className="absolute bottom-5 left-5 rounded-full border border-cyan-300/20 bg-cyan-400/10 px-3 py-1 text-xs uppercase tracking-[0.18em] text-cyan-200">
                       Screenshot placeholder
                     </div>
@@ -67,9 +67,9 @@ export function VisualShowcase() {
 
           <div className="grid gap-5">
             {showcaseFrames.slice(1).map((frame, index) => (
-              <Reveal key={frame.title} delay={index * 0.08}>
+              <Reveal key={frame.title} disabled>
                 <article className="surface overflow-hidden p-4">
-                  <div className="rounded-[24px] border border-white/8 bg-[#081019] p-4 shadow-[0_18px_50px_rgba(4,10,24,0.24)]">
+                  <div className="rounded-[24px] border border-white/8 bg-[#081019] p-4 shadow-[0_12px_28px_rgba(4,10,24,0.14)]">
                     <div className="flex items-center justify-between gap-3">
                       <div>
                         <p className="text-xs uppercase tracking-[0.22em] text-white/34">Preview frame</p>

@@ -1,3 +1,5 @@
+"use client";
+
 import { pricingCards, trialDetails } from "@/data/landing";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -21,7 +23,7 @@ export function Pricing() {
         />
 
         <div className="mx-auto mt-12 max-w-4xl">
-          <Reveal>
+          <Reveal y={10}>
             <article className="surface relative overflow-hidden p-7 sm:p-8 lg:p-10">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(88,162,255,0.12),transparent_38%),linear-gradient(180deg,rgba(255,255,255,0.02),transparent_26%)]" />
               <div className="absolute inset-x-20 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/40 to-transparent" />

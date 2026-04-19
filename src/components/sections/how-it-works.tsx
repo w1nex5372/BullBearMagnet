@@ -16,7 +16,7 @@ export function HowItWorks() {
 
         <div className="mt-12 grid gap-4 xl:grid-cols-4">
           {workflowSteps.map((step, index) => (
-            <Reveal key={step.step} delay={index * 0.06}>
+            <Reveal key={step.step} delay={index * 0.03} y={10} disabled={index > 1}>
               <article className="group surface relative h-full overflow-hidden p-6 sm:p-7">
                 <div className="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/35 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <div className="flex items-center justify-between gap-4">
